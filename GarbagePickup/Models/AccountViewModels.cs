@@ -49,9 +49,9 @@ namespace GarbagePickup.Models
     public class LoginViewModel
     {
         [Required]
-        [Display(Name = "Email")]
+        [Display(Name = "UserName")]
         [EmailAddress]
-        public string Email { get; set; }
+        public string UserName { get; set; }
 
         [Required]
         [DataType(DataType.Password)]
@@ -68,6 +68,14 @@ namespace GarbagePickup.Models
         [EmailAddress]
         [Display(Name = "Email")]
         public string Email { get; set; }
+
+        [Required]
+        [Display(Name = "UserName")]
+        public string UserName { get; set; }
+
+        [Required]
+        [Display(Name = "UserRoles")]
+        public string Role { get; set; }
 
         [Required]
         [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
