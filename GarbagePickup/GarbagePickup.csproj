@@ -214,6 +214,14 @@
     <Compile Include="Migrations\201709121554531_Deleted Users.Designer.cs">
       <DependentUpon>201709121554531_Deleted Users.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201709121615525_Pass User through to viewmodels.cs" />
+    <Compile Include="Migrations\201709121615525_Pass User through to viewmodels.Designer.cs">
+      <DependentUpon>201709121615525_Pass User through to viewmodels.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709121807314_Added public variables to ApplicationUser.cs" />
+    <Compile Include="Migrations\201709121807314_Added public variables to ApplicationUser.Designer.cs">
+      <DependentUpon>201709121807314_Added public variables to ApplicationUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -306,6 +314,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201709121554531_Deleted Users.resx">
       <DependentUpon>201709121554531_Deleted Users.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709121615525_Pass User through to viewmodels.resx">
+      <DependentUpon>201709121615525_Pass User through to viewmodels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709121807314_Added public variables to ApplicationUser.resx">
+      <DependentUpon>201709121807314_Added public variables to ApplicationUser.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

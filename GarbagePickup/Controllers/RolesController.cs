@@ -43,19 +43,20 @@ namespace GarbagePickup.Controllers
 
         public ActionResult Customer()
         {
-            var customer = context.Users.Select(m => m.UserName);
-            return View(customer);
+            var username = User.Identity.GetUserName();
+            var user = context.Users.Where(x => x.UserName == username).First();
+            return View(user);
         }
 
         public ActionResult Employee()
         {
-            var employee = context.Users.Select(m => m.UserName);
-            return View(employee);
+            var username = User.Identity.GetUserName();
+            var user = context.Users.Where(x => x.UserName == username).First();
+            return View(user);
         }
 
         public ActionResult Admin()
         {
-            var admin = context.Users.Select(m => m.UserName);
             var username = User.Identity.GetUserName();
             var user = context.Users.Where(x => x.UserName == username).First();
             return View(user);
