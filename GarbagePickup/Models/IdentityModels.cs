@@ -13,6 +13,7 @@ namespace GarbagePickup.Models
         public string LastName { get; set; }
         public string StreetAddress { get; set; }
         public string Zip { get; set; }
+        public string Schedule { get; set; }
 
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
         {

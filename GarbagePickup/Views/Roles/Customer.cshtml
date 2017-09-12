@@ -8,8 +8,8 @@
 {
     { Response.Redirect("~/Home/NoResults"); }
 }
-<h2>Customer</h2>
+<h2>Welcome @Model.UserName</h2>
 
-<ul>
+<p>Current schedule is: @Model.Schedule</p>
 
-</ul>
+<p>If you wish to change your schedule click here. @Html.ActionLink("Schedule", "Schedule", "Roles")</p> 
