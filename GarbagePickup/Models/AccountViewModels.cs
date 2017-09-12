@@ -139,7 +139,22 @@ namespace GarbagePickup.Models
 
     public class DetailsViewModel
     {
+        [Display(Name = "UserName")]
+        public string UserName { get; set; }
+
+        [Display(Name = "FirstName")]
+        public string FirstName { get; set; }
+
+        [Display(Name = "LastName")]
+        public string LastName { get; set; }
+
+        [Display(Name = "Email")]
+        public string Email { get; set; }
+
         [Display(Name = "Address")]
         public string Address { get; set; }
+
+        [Display(Name = "Zip")]
+        public string Zip { get; set; }
     }
 }

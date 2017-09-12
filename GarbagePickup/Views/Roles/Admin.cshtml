@@ -6,7 +6,13 @@
 
 @if (!User.IsInRole("Admin"))
 {
-    {Response.Redirect("~/Home/NoResults");}
+    { Response.Redirect("~/Home/NoResults"); }
 }
+else
+{
 <h2>Admin</h2>
 
+<ul>
+    <li>First Name: @Model.FirstName</li>
+</ul>
+}

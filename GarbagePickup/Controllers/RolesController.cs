@@ -2,18 +2,19 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Principal;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 
 namespace GarbagePickup.Controllers
 {
     public class RolesController : Controller
     {
+        ApplicationDbContext context = new ApplicationDbContext();
         // GET: Roles
         public ActionResult Index()
         {
-            ApplicationDbContext context = new ApplicationDbContext();
-
             if (User.Identity.IsAuthenticated)
             {
                 if (User.IsInRole("Customer"))
@@ -41,17 +42,20 @@ namespace GarbagePickup.Controllers
 
         public ActionResult Customer()
         {
-            return View();
+            var customer = context.Users.Select(m => m.UserName);
+            return View(customer);
         }
 
         public ActionResult Employee()
         {
-            return View();
+            var employee = context.Users.Select(m => m.UserName);
+            return View(employee);
         }
 
         public ActionResult Admin()
         {
-            return View();
+            var admin = context.Users.Select(m => m.UserName);
+            return View(admin);
         }
     }
 }
