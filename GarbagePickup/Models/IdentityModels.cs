@@ -35,5 +35,6 @@ namespace GarbagePickup.Models
         {
             return new ApplicationDbContext();
         }
+        DbSet<ScheduleList> ScheduleLists { get; set; }
     }
 }

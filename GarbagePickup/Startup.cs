@@ -3,6 +3,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Owin;
 using Owin;
+using System.Data.Entity;
 
 [assembly: OwinStartupAttribute(typeof(GarbagePickup.Startup))]
 namespace GarbagePickup
@@ -55,6 +56,8 @@ namespace GarbagePickup
                 role.Name = "Customer";
                 roleManager.Create(role);
             }
+
+            
         }
     }
 }

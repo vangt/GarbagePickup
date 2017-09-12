@@ -6,3 +6,12 @@
 
 <h2>Schedule</h2>
 
+<p>Currently it is set to: @Model.Schedule</p>
+
+<div class="form-group">
+    @Html.LabelFor(model => model.Schedule, new { @class = "control-label col-md-2" })
+    <div class="col-md-10">
+        @Html.DropDownListFor(model => model.Schedule, new SelectList(Model.Schedule, "Name"), "", new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.Schedule, "", new { @class = "text-danger" })
+    </div>
+</div>

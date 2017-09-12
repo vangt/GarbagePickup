@@ -222,10 +222,15 @@
     <Compile Include="Migrations\201709121807314_Added public variables to ApplicationUser.Designer.cs">
       <DependentUpon>201709121807314_Added public variables to ApplicationUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201709121847200_Added a schedule change page.cs" />
+    <Compile Include="Migrations\201709121847200_Added a schedule change page.Designer.cs">
+      <DependentUpon>201709121847200_Added a schedule change page.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\ScheduleList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -321,6 +326,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201709121807314_Added public variables to ApplicationUser.resx">
       <DependentUpon>201709121807314_Added public variables to ApplicationUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709121847200_Added a schedule change page.resx">
+      <DependentUpon>201709121847200_Added a schedule change page.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

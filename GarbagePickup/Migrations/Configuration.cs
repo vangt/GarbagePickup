@@ -1,5 +1,6 @@
 namespace GarbagePickup.Migrations
 {
+    using Models;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
@@ -27,6 +28,13 @@ namespace GarbagePickup.Migrations
             //      new Person { FullName = "Rowan Miller" }
             //    );
             //
+            ScheduleList schedule = new ScheduleList();
+            string weekly = "Weekly";
+            schedule.Date = weekly;
+            string biWeekly = "Bi-Weekly";
+            schedule.Date = biWeekly;
+            string setDate = "";
+            schedule.Date = setDate;
         }
     }
 }

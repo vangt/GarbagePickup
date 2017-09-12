@@ -61,5 +61,12 @@ namespace GarbagePickup.Controllers
             var user = context.Users.Where(x => x.UserName == username).First();
             return View(user);
         }
+
+        public ActionResult Schedule()
+        {
+            var username = User.Identity.GetUserName();
+            var user = context.Users.Where(x => x.UserName == username).First();
+            return View(user);
+        }
     }
 }
