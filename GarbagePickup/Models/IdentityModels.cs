@@ -3,6 +3,7 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using System.Collections.Generic;
 
 namespace GarbagePickup.Models
 {
@@ -13,7 +14,11 @@ namespace GarbagePickup.Models
         public string LastName { get; set; }
         public string StreetAddress { get; set; }
         public string Zip { get; set; }
-        public string Schedule { get; set; }
+
+        public ScheduleList scheduleList { get; set; }
+        public int ScheduleId { get; set; }
+
+        public IEnumerable<ScheduleList> Schedules { get; set; }
 
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
         {

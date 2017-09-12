@@ -28,13 +28,6 @@ namespace GarbagePickup.Migrations
             //      new Person { FullName = "Rowan Miller" }
             //    );
             //
-            ScheduleList schedule = new ScheduleList();
-            string weekly = "Weekly";
-            schedule.Date = weekly;
-            string biWeekly = "Bi-Weekly";
-            schedule.Date = biWeekly;
-            string setDate = "";
-            schedule.Date = setDate;
         }
     }
 }

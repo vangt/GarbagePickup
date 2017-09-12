@@ -226,6 +226,10 @@
     <Compile Include="Migrations\201709121847200_Added a schedule change page.Designer.cs">
       <DependentUpon>201709121847200_Added a schedule change page.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201709121925464_Add schedule list.cs" />
+    <Compile Include="Migrations\201709121925464_Add schedule list.Designer.cs">
+      <DependentUpon>201709121925464_Add schedule list.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -329,6 +333,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201709121847200_Added a schedule change page.resx">
       <DependentUpon>201709121847200_Added a schedule change page.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709121925464_Add schedule list.resx">
+      <DependentUpon>201709121925464_Add schedule list.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
