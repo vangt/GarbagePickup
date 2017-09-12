@@ -86,6 +86,26 @@ namespace GarbagePickup.Models
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+
+        [Required]
+        [Display(Name = "Address")]
+        public string Address { get; set; }
+
+        [Required]
+        [Display(Name = "Zip")]
+        public string Zip { get; set; }
+
+        [Required]
+        [Display(Name = "Phone")]
+        public string Phone { get; set; }
+
+        [Required]
+        [Display(Name = "FirstName")]
+        public string FirstName { get; set; }
+
+        [Required]
+        [Display(Name = "LastName")]
+        public string LastName { get; set; }
     }
 
     public class ResetPasswordViewModel
@@ -115,5 +135,11 @@ namespace GarbagePickup.Models
         [EmailAddress]
         [Display(Name = "Email")]
         public string Email { get; set; }
+    }
+
+    public class DetailsViewModel
+    {
+        [Display(Name = "Address")]
+        public string Address { get; set; }
     }
 }
