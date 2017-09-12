@@ -141,7 +141,7 @@ namespace GarbagePickup.Controllers
         [AllowAnonymous]
         public ActionResult Register()
         {
-            ViewBag.Name = new SelectList(context.Roles.Where(x => !x.Name.Contains("Admin"));
+            ViewBag.Name = new SelectList(context.Roles.Where(x => !x.Name.Contains("Admin")));
 
             return View();
         }
