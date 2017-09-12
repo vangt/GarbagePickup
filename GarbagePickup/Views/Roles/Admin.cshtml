@@ -4,5 +4,9 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+@if (!User.IsInRole("Admin"))
+{
+    {Response.Redirect("~/Home/NoResults");}
+}
 <h2>Admin</h2>
 
