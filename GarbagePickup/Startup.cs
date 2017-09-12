@@ -27,7 +27,7 @@ namespace GarbagePickup
                 var role = new IdentityRole();
                 role.Name = "Admin";
                 roleManager.Create(role);
-                
+
                 var user = new ApplicationUser();
                 user.UserName = "tim";
                 user.Email = "vangt86@gmail.com";
@@ -42,14 +42,14 @@ namespace GarbagePickup
                 }
             }
 
-            if(!roleManager.RoleExists("Employee"))
+            if (!roleManager.RoleExists("Employee"))
             {
                 var role = new IdentityRole();
                 role.Name = "Employee";
                 roleManager.Create(role);
             }
 
-            if(!roleManager.RoleExists("Customer"))
+            if (!roleManager.RoleExists("Customer"))
             {
                 var role = new IdentityRole();
                 role.Name = "Customer";

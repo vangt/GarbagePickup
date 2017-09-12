@@ -1,4 +1,5 @@
 ﻿using GarbagePickup.Models;
+using Microsoft.AspNet.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -55,7 +56,9 @@ namespace GarbagePickup.Controllers
         public ActionResult Admin()
         {
             var admin = context.Users.Select(m => m.UserName);
-            return View(admin);
+            var username = User.Identity.GetUserName();
+            var user = context.Users.Where(x => x.UserName == username).First();
+            return View(user);
         }
     }
 }
