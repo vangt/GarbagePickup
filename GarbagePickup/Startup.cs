@@ -27,8 +27,7 @@ namespace GarbagePickup
                 var role = new IdentityRole();
                 role.Name = "Admin";
                 roleManager.Create(role);
-
-
+                
                 var user = new ApplicationUser();
                 user.UserName = "tim";
                 user.Email = "vangt86@gmail.com";
