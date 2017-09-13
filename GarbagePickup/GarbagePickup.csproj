@@ -199,6 +199,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\RolesController.cs" />
+    <Compile Include="Controllers\ScheduleListsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -229,6 +230,18 @@
     <Compile Include="Migrations\201709121925464_Add schedule list.cs" />
     <Compile Include="Migrations\201709121925464_Add schedule list.Designer.cs">
       <DependentUpon>201709121925464_Add schedule list.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709121948256_Changed Application User.cs" />
+    <Compile Include="Migrations\201709121948256_Changed Application User.Designer.cs">
+      <DependentUpon>201709121948256_Changed Application User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709122007317_Populate Schedule table.cs" />
+    <Compile Include="Migrations\201709122007317_Populate Schedule table.Designer.cs">
+      <DependentUpon>201709122007317_Populate Schedule table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709131302295_update schedule list.cs" />
+    <Compile Include="Migrations\201709131302295_update schedule list.Designer.cs">
+      <DependentUpon>201709131302295_update schedule list.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -303,6 +316,11 @@
     <Content Include="Views\Roles\Admin.cshtml" />
     <Content Include="Views\Roles\Index.cshtml" />
     <Content Include="Views\Roles\Schedule.cshtml" />
+    <Content Include="Views\ScheduleLists\Create.cshtml" />
+    <Content Include="Views\ScheduleLists\Delete.cshtml" />
+    <Content Include="Views\ScheduleLists\Details.cshtml" />
+    <Content Include="Views\ScheduleLists\Edit.cshtml" />
+    <Content Include="Views\ScheduleLists\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -336,6 +354,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201709121925464_Add schedule list.resx">
       <DependentUpon>201709121925464_Add schedule list.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709121948256_Changed Application User.resx">
+      <DependentUpon>201709121948256_Changed Application User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709122007317_Populate Schedule table.resx">
+      <DependentUpon>201709122007317_Populate Schedule table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709131302295_update schedule list.resx">
+      <DependentUpon>201709131302295_update schedule list.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
