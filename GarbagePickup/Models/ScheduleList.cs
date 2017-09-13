@@ -11,6 +11,8 @@ namespace GarbagePickup.Models
 
         public string Date { get; set; }
 
-        public string Week
+        public string Week { get; set; }
+
+        public string ReturnDate { get; set; }
     }
 }
