@@ -18,6 +18,11 @@ namespace GarbagePickup.Models
         public ScheduleList scheduleList { get; set; }
         public int ScheduleId { get; set; }
 
+        public string Week { get; set; }
+        public string Day { get; set; }
+        public string LeavingDate { get; set; }
+        public string ReturningDate { get; set; }
+
         public IEnumerable<ScheduleList> Schedules { get; set; }
 
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)

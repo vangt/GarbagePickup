@@ -243,6 +243,18 @@
     <Compile Include="Migrations\201709131302295_update schedule list.Designer.cs">
       <DependentUpon>201709131302295_update schedule list.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201709131331586_updated the schedule list with new columns.cs" />
+    <Compile Include="Migrations\201709131331586_updated the schedule list with new columns.Designer.cs">
+      <DependentUpon>201709131331586_updated the schedule list with new columns.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709131337267_added a leave date.cs" />
+    <Compile Include="Migrations\201709131337267_added a leave date.Designer.cs">
+      <DependentUpon>201709131337267_added a leave date.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709131432184_Added week,day,leave, and return to user.cs" />
+    <Compile Include="Migrations\201709131432184_Added week,day,leave, and return to user.Designer.cs">
+      <DependentUpon>201709131432184_Added week,day,leave, and return to user.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -363,6 +375,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201709131302295_update schedule list.resx">
       <DependentUpon>201709131302295_update schedule list.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709131331586_updated the schedule list with new columns.resx">
+      <DependentUpon>201709131331586_updated the schedule list with new columns.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709131337267_added a leave date.resx">
+      <DependentUpon>201709131337267_added a leave date.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709131432184_Added week,day,leave, and return to user.resx">
+      <DependentUpon>201709131432184_Added week,day,leave, and return to user.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

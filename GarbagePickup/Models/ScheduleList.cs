@@ -13,6 +13,8 @@ namespace GarbagePickup.Models
 
         public string Week { get; set; }
 
+        public string LeaveDate { get; set; }
+
         public string ReturnDate { get; set; }
     }
 }
