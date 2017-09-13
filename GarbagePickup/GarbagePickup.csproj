@@ -255,11 +255,21 @@
     <Compile Include="Migrations\201709131432184_Added week,day,leave, and return to user.Designer.cs">
       <DependentUpon>201709131432184_Added week,day,leave, and return to user.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201709131540192_deleted week, leave, and return. Made them seperate tables.cs" />
+    <Compile Include="Migrations\201709131540192_deleted week, leave, and return. Made them seperate tables.Designer.cs">
+      <DependentUpon>201709131540192_deleted week, leave, and return. Made them seperate tables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709131547425_delete null data.cs" />
+    <Compile Include="Migrations\201709131547425_delete null data.Designer.cs">
+      <DependentUpon>201709131547425_delete null data.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\ScheduleList.cs" />
+    <Compile Include="Models\SpecialDate.cs" />
+    <Compile Include="Models\Week.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -384,6 +394,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201709131432184_Added week,day,leave, and return to user.resx">
       <DependentUpon>201709131432184_Added week,day,leave, and return to user.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709131540192_deleted week, leave, and return. Made them seperate tables.resx">
+      <DependentUpon>201709131540192_deleted week, leave, and return. Made them seperate tables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709131547425_delete null data.resx">
+      <DependentUpon>201709131547425_delete null data.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

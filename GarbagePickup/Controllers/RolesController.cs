@@ -64,10 +64,11 @@ namespace GarbagePickup.Controllers
 
         public ActionResult Schedule()
         {
-            var sc = context.ScheduleLists.Select(x => x).ToList();
+            var schedulelist = context.ScheduleLists.Select(x => x).ToList();
+
             var username = User.Identity.GetUserName();
             var user = context.Users.Where(x => x.UserName == username).First();
-            user.Schedules = sc;
+            user.Schedules = schedulelist;
 
             return View(user);
         }

@@ -5,10 +5,9 @@ using System.Web;
 
 namespace GarbagePickup.Models
 {
-    public class ScheduleList
+    public class Week
     {
         public int Id { get; set; }
-
-        public string Date { get; set; }
+        public int Weeks { get; set; }
     }
 }
