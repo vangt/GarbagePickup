@@ -20,15 +20,12 @@ namespace GarbagePickup.Models
         public int ScheduleId { get; set; }
         public string Day { get; set; }
 
-        public Week Week { get; set; }
         public int Weeks { get; set; }
         
-        public SpecialDate SpecialDate { get; set; }
         public string LeavingDate { get; set; }
         public string ReturningDate { get; set; }
 
         public IEnumerable<ScheduleList> Schedules { get; set; }
-        public IEnumerable<Week> NumberOfWeeks { get; set; }
 
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
         {

@@ -158,6 +158,11 @@ namespace GarbagePickup.Controllers
                 var user = new ApplicationUser
                 { UserName = model.UserName,
                     Email = model.Email,
+                    FirstName = model.FirstName,
+                    LastName = model.LastName,
+                    StreetAddress = model.Address,
+                    Zip = model.Zip,
+                    PhoneNumber = model.Phone
                 };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)

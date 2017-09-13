@@ -62,15 +62,53 @@ namespace GarbagePickup.Controllers
             return View(user);
         }
 
+        [HttpGet]
         public ActionResult Schedule()
         {
             var schedulelist = context.ScheduleLists.Select(x => x).ToList();
-
             var username = User.Identity.GetUserName();
             var user = context.Users.Where(x => x.UserName == username).First();
             user.Schedules = schedulelist;
 
             return View(user);
+        }
+
+        [HttpPost]
+        public ActionResult Schedule(ApplicationUser user)
+        {
+            var userName = User.Identity.GetUserName();
+            var userInfo = context.Users.Where(x => x.UserName == userName).First();
+            userInfo.Weeks = user.Weeks;
+            userInfo.Day = user.Day;
+            userInfo.LeavingDate = user.LeavingDate;
+            userInfo.ReturningDate = user.ReturningDate;
+            context.SaveChanges();
+
+            return RedirectToAction("Index", "Roles");
+        }
+
+        [HttpGet]
+        public ActionResult CustomerProfile()
+        {
+            var username = User.Identity.GetUserName();
+            var user = context.Users.Where(x => x.UserName == username).First();
+            return View(user);
+        }
+
+        [HttpPost]
+        public ActionResult CustomerProfile(ApplicationUser user)
+        {
+            var userName = User.Identity.GetUserName();
+            var userInfo = context.Users.Where(x => x.UserName == userName).First();
+            userInfo.FirstName = user.FirstName;
+            userInfo.LastName = user.LastName;
+            userInfo.StreetAddress = user.StreetAddress;
+            userInfo.Zip = user.Zip;
+            userInfo.PhoneNumber = user.PhoneNumber;
+            userInfo.Email = user.Email;
+            context.SaveChanges();
+
+            return RedirectToAction("Index", "Roles");
         }
     }
 }
