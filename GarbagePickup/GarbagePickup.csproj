@@ -199,7 +199,6 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\RolesController.cs" />
-    <Compile Include="Controllers\ScheduleListsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -350,6 +349,7 @@
     <Content Include="Views\ScheduleLists\Edit.cshtml" />
     <Content Include="Views\ScheduleLists\Index.cshtml" />
     <Content Include="Views\Roles\CustomerProfile.cshtml" />
+    <Content Include="Views\Roles\FindCustomers.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

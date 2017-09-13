@@ -10,4 +10,20 @@
 }
 <h2>Employee</h2>
 
-<p></p>
+<h4>Employee Profile</h4>
+
+<p>First Name: @Model.FirstName</p>
+
+<p>Last Name: @Model.LastName</p>
+
+<p>Street Address: @Model.StreetAddress</p>
+
+<p>Zip: @Model.Zip</p>
+
+<p>Phone: @Model.PhoneNumber</p>
+
+<p>Email: @Model.Email</p>
+
+<h4>Work List</h4>
+
+<p>Click here to located customers: @Html.ActionLink("Find Customers", "FindCustomers", "Roles")</p>

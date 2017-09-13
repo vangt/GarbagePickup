@@ -110,5 +110,13 @@ namespace GarbagePickup.Controllers
 
             return RedirectToAction("Index", "Roles");
         }
+
+        public ActionResult FindCustomers()
+        {
+            var role = context.Roles.Where(x => x.Name == "Customer");
+            var customers = context.Users.Where(x => x.Roles == role).ToList();
+
+            return View(customers);
+        }
     }
 }
