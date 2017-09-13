@@ -10,32 +10,36 @@
 
 <div class="form-group">
     @Html.Label("Weekly or This week only ", new { @class = "control-label col-md-2" })
-    <div class="col-md-10">
+    <br />
+        <div class="col-md-10">
         @Html.DropDownListFor(model => model.Week, new SelectList(Model.Schedules.Select(x=>x.Week), "Week"), "", new { @class = "form-control" })
         @Html.ValidationMessageFor(model => model.ScheduleId, "", new { @class = "text-danger" })
     </div>
 </div>
-
+<br />
 <div class="form-group">
     @Html.Label("Day of the week", new { @class = "control-label col-md-2" })
+    <br />
     <div class="col-md-10">
         @Html.DropDownListFor(model => model.Day, new SelectList(Model.Schedules.Select(x => x.Date), "Date"), "", new { @class = "form-control" })
         @Html.ValidationMessageFor(model => model.ScheduleId, "", new { @class = "text-danger" })
     </div>
 </div>
-
+<br />
 <p>If you are leaving for a period of time please specify the date you are leaving and returning down below.</p>
-
+<br />
 <div class="form-group">
     @Html.Label("Leaving on", new { @class = "control-label col-md-2" })
+    <br />
     <div class="col-md-10">
         @Html.TextBoxFor(model => model.LeavingDate, new { @class = "form-control" })
         @Html.ValidationMessageFor(model => model.ScheduleId, "", new { @class = "text-danger" })
     </div>
 </div>
-
+<br />
 <div class="form-group">
     @Html.Label("Returning on", new { @class = "control-label col-md-2" })
+    <br />
     <div class="col-md-10">
         @Html.TextBoxFor(model => model.ReturningDate,  new { @class = "form-control" })
         @Html.ValidationMessageFor(model => model.ScheduleId, "", new { @class = "text-danger" })
