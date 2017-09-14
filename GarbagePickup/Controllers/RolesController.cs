@@ -124,33 +124,14 @@ namespace GarbagePickup.Controllers
         public ActionResult FindCustomers(string tempZip)
         {
             var role = context.Roles.Where(x => x.Name == "Customer").Select(x=>x.Id).ToString();
-            var customers = context.Users.Where(x => x.Zip == tempZip).ToList();
+            var customers = context.Users.Where(x => x.Zip == tempZip && x.Role == "Customer").ToList();
             var username = User.Identity.GetUserName();
             var user = context.Users.Where(x => x.UserName == username).First();
             user.CustomerUsers = customers;
-            var users = user.CustomerUsers.ToList();
-            var newCustomers = PossibleCustomers(users);
+
             user.TempZip = tempZip;
 
-            return View(customers);
-        }
-
-        public List<ApplicationUser> PossibleCustomers(List<ApplicationUser> list)
-        {
-            var role = context.Roles.Where(x => x.Name == "Customer").Select(x => x.Id).ToList();
-            string rolecheck = role.First();
-            var users = list;
-            var newUsers = new List<ApplicationUser>();
-
-            foreach (var c in users)
-            {
-                if (c.Roles.Select(x => x.RoleId).ToString() == rolecheck)
-                {
-                    newUsers.Add(c);
-                }
-            }
-
-            return newUsers;
-        }
+            return View(user);
+        }    
     }
 }
