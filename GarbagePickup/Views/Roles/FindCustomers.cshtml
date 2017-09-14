@@ -4,5 +4,51 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+@if(!User.IsInRole("Employee"))
+{
+    { Response.Redirect("~/Home/NoResults"); }
+}
+
 <h2>FindCustomers</h2>
 
+<p>Type in a 5 digit zip code.</p>
+
+@using (Html.BeginForm())
+{
+<div class="form-group">
+    @Html.Label("Find Customer", new { @class = "control-label col-md-2" })
+    <div class="col-md-10">
+        @Html.TextBoxFor(model => model.TempZip, new { @class = "form-control" })
+    </div>
+</div>
+
+<div class="form-group">
+    <div class="col-md-offset-2 col-md-10">
+        <input type="submit" class="btn btn-default" value="Find" />
+    </div>
+</div>
+}
+
+@if (Model.TempZip != null)
+{
+    <table class="table table-bordered table-hover">
+        <thead>Customers</thead>
+            <tbody>
+            @foreach (var customer in Model.CustomerUsers)
+            {
+               
+            <tr>
+                <td>First Name: @customer.FirstName</td>
+                <td>Last Name: @customer.LastName</td>
+                <td>Street Address: @customer.StreetAddress</td>
+                <td>Zip: @customer.Zip</td>
+                <td>Phone: @customer.PhoneNumber</td>
+            </tr>
+            }
+            </tbody>
+    </table>
+        }
+
+        <div>
+            @Html.ActionLink("Return to profile", "Employee", "Roles")
+        </div>

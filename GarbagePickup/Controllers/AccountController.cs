@@ -162,7 +162,8 @@ namespace GarbagePickup.Controllers
                     LastName = model.LastName,
                     StreetAddress = model.Address,
                     Zip = model.Zip,
-                    PhoneNumber = model.Phone
+                    PhoneNumber = model.Phone,
+                    Role = model.UserRoles
                 };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)

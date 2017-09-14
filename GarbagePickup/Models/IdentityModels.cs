@@ -25,11 +25,13 @@ namespace GarbagePickup.Models
         public string LeavingDate { get; set; }
         public string ReturningDate { get; set; }
 
+        public string Role { get; set; }
+
         public ApplicationUser applicationUsers { get; set; }
 
         public IEnumerable<ScheduleList> Schedules { get; set; }
 
-        public IEnumerable<ApplicationUser> Users { get; set; }
+        public IEnumerable<ApplicationUser> CustomerUsers { get; set; }
 
         public string TempZip { get; set; }
 
